@@ -23,13 +23,14 @@ export default function TodoListSwitcher() {
             onClick={() => setCategory(k as TCategoryKey)}
             className={k === currentCategory ? "border-[1px] border-black" : ""}
             key={k}
+            data-cy={k}
           >
             {categorySettings[k as TCategoryKey]}
           </button>
         ))}
       </nav>
 
-      <button onClick={clearCompleted}>Clear completed</button>
+      <button onClick={clearCompleted} data-cy="clear-completed-todos">Clear completed</button>
     </footer>
   );
 }

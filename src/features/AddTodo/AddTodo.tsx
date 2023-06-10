@@ -27,6 +27,7 @@ export default function AddTodo(props: IAddTodo) {
       onKeyDown={(e: React.KeyboardEvent<HTMLDivElement>) => {
         if (e.key === "Enter") createTodo();
       }}
+      data-cy="add-todo"
     >
       <input
         type="text"
